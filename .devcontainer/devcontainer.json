@@ -1,0 +1,11 @@
+{
+  "name": "Docusaurus Project",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
+  "forwardPorts": [3000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+    "extensions": [
+        "dev-docs.dev-docs"
+   ]
+}

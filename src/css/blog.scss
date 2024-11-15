@@ -1,0 +1,226 @@
+@mixin conditional-styles($class) {
+  $selector: if(&, "#{&}.#{$class}", false);
+  @if $selector {
+    // Styles to apply if the class is present
+    .col--2 {
+      display: none;
+    }
+  }
+}
+
+.author-avatar {
+  border-radius: 50%;
+  background-color: white;
+}
+
+.blog-wrapper {
+  header {
+    display: none;
+  }
+}
+
+// [data-theme="dark"] p {
+//   color: white !important;
+// }
+
+
+.blog-post-page {
+
+  #__blog-post-container {
+    display: flex;
+    flex-direction: column;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include conditional-styles("col--2");
+  .row {
+    justify-content: flex-start !important;
+  }
+  .navbar {
+    margin-bottom: 5em;
+  }
+
+  .pagination-nav {
+    display: none;
+  }
+
+  ol {
+    list-style: auto !important;
+  }
+
+
+
+  li {
+    list-style: auto !important;
+  }
+
+  .table-of-contents {
+    display: none;
+  }
+
+  .dev-docs-blog {
+    p {
+      font-size: 18px;
+    }
+  }
+
+
+
+  .blog-header-title-card {
+    line-break: strict;
+    white-space: normal; // or pre-wrap to preserve white spaces
+    word-break: break-word;
+    text-overflow: ellipsis;
+    // height: 40vh !important;
+    display: flex;
+    flex: 0 0 40ch !important;
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+    margin-bottom: 2em;
+    gap: 2rem; // Use a relative unit like rem for a more responsive gap
+    flex-shrink: 0;
+
+    padding: 2rem; // Use a relative unit for padding
+
+    // Adjust width to a percentage for responsiveness
+    width: 100%;
+
+    h1 {
+      font-size: 56px;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 32px; /* Roughly 57% of the original size */
+      }
+      p {
+        font-size: calc(14px + 0.5vw); /* Fluid scaling based on viewport width */
+      }
+    }
+
+    // Limit the maximum width to provide a better reading experience on larger screens
+    //   max-width: 980px;
+
+    // Styles for smaller screens or mobile devices
+    @media screen and (max-width: 768px) {
+      // Adjust styles for smaller screens
+      padding: 1rem;
+      .blog-header-title-card {
+        line-break: anywhere;
+        height: 40vh !important;
+      }
+    }
+    a {
+      color: unset;
+    }
+    .image-blog-header-card {
+      a {
+        color: blue !important;
+      }
+    }
+  }
+
+  .margin-vert--lg {
+    margin: 0 !important;
+    min-width: 100vw !important;
+  }
+  #__docusaurus_skipToContent_fallback > div > .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--ifm-spacing-horizontal) * -1);
+    justify-content: center;
+  }
+
+  [itemtype="http://schema.org/Blog"]
+  {
+    align-self: center !important;
+  }
+}
+
+.blog-list-page {
+  [aria-label="Blog recent posts navigation"] {
+    padding-left: 10em;
+  }
+  .margin-vert--lg {
+    margin: 0 !important;
+    padding-top: 4em;
+    min-width: 100vw !important;
+  }
+
+
+
+  .blog-header-title-card {
+    line-break: strict;
+    height: 40vh !important;
+    a {
+      color: unset !important;
+    }
+  }
+
+  .image-blog-header-card {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+      color: white !important;
+    }
+  }
+
+  .image-blog-header-card-light {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+      color: unset !important;
+    }
+  }
+
+  article
+  {
+    margin-bottom: 2em !important;
+    padding-bottom: 0px !important;
+
+    .markdown {
+      
+      .blog-header-title-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        flex: 0 0 35ch !important;
+        gap: 2rem; // Use a relative unit like rem for a more responsive gap
+        flex-shrink: 0;
+
+        padding: 2rem; // Use a relative unit for padding
+
+        // Adjust width to a percentage for responsiveness
+        width: 100%;
+
+        // Limit the maximum width to provide a better reading experience on larger screens
+        //   max-width: 980px;
+
+        // Styles for smaller screens or mobile devices
+        @media screen and (max-width: 768px) {
+          // Adjust styles for smaller screens
+          padding: 1rem;
+        }
+      }
+
+      .dev-docs-blog {
+        display: none;
+      }
+    }
+  }
+}
