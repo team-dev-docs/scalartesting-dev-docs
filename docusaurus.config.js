@@ -45,6 +45,19 @@ const config = {
   plugins: [
     'docusaurus-plugin-sass',
     [
+      '@scalar/docusaurus',
+      {
+        label: 'Scalar',
+        route: '/scalar',
+        showNavLink: true, // optional, default is true
+        configuration: {
+          spec: {
+            url: 'https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml',
+          },
+        },
+      }
+    ],
+    [
       './oramaSearchPlugin',
       {
         // Optional plugin config
