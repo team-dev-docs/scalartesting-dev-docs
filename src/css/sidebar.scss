@@ -1,0 +1,121 @@
+
+// import design-preferences.scss
+
+
+
+.menu__link--active:not(.menu__link--sublist) {
+  border-radius: 7px;
+  background: none;
+  // color: $color-1;
+  color: $color-1 !important;
+  /* Navigation Selected */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.322px;
+}
+
+[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
+  color: $color-1 !important;
+}
+
+.menu__link {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.322px;
+  color: #313032;
+}
+
+[data-theme="dark"] .menu__link {
+  color: #A2A1A5 !important
+}
+
+menu__link--sublist {
+  font-weight: 600;
+}
+
+.menu__link--active {
+  color:  #0D0D0D !important;
+}
+
+[data-theme="dark"] .menu__link--active {
+  color: #FFF !important;
+}
+
+.menu__link--sublist-caret:after,
+.menu__caret:before {
+  background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7.41 15.16L12 10.58l4.59 4.58L18 13.75l-6-6-6 6 1.41 1.41z'/></svg>");
+}
+
+
+
+.thin-scrollbar.theme-doc-toc-desktop {
+ 
+}
+
+
+
+#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > button > svg {
+  color: black !important
+}
+
+
+
+.theme-doc-sidebar-container {
+  border: none !important;
+}
+
+.tocCollapsible_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-styles-module.theme-doc-toc-mobile.tocMobile_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-TOC-Mobile-styles-module {
+ .clean-btn {
+  padding-left: 2rem;
+  display: unset !important;
+ }
+}
+
+.navbar-sidebar__back {
+  margin-top: 20px;
+  background: transparent;
+  color: black !important
+
+}
+
+.navbar-toggle {
+  svg {
+    color: #3333FF !important
+  }
+}
+
+.theme-doc-toc-desktop::-webkit-scrollbar-track {
+  display: none;
+}
+
+
+.breadcrumbs__link {
+  font-weight: 500;
+}
+
+.breadcrumbs {
+   li:nth-child(1) {
+    display: none !important;
+   }
+}
+
+// .breadcrumbs__item--active .breadcrumbs__link {
+//   background: $color-1;
+//   color: white;
+// }
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: $color-1;
+  // background: none;
+
+// font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}

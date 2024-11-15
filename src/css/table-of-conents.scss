@@ -1,0 +1,56 @@
+.tocCollapsibleButton_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after {
+  background: none !important;
+}
+
+.theme-doc-toc-mobile {
+  .tocCollapsibleButton_TO0P:after {
+    background: none !important;
+  }
+}
+
+.theme-doc-toc-desktop::before {
+  content: ("On This Page");
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.table-of-contents__link {
+  color: #a2a1a5;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: var(--ifm-color-primary) !important;
+  text-decoration: none;
+}
+
+// .table-of-contents__link--active::before {
+//   content: ("");
+//   border-right: 0.5px solid $color-1;
+// }
+
+// [data-theme="light"] .table-of-contents {
+//     backdrop-filter: blur(16px) saturate(180%);
+//     -webkit-backdrop-filter: blur(16px) saturate(180%);
+//     background-color: rgba(255, 255, 255, 0.80);
+//     // border-radius: 12px;
+//     // border: 1px solid rgba(209, 213, 219, 0.3);
+// }
+
+// [data-theme="dark"] .table-of-contents {
+//     backdrop-filter: blur(16px) saturate(180%);
+//     -webkit-backdrop-filter: blur(16px) saturate(180%);
+//     background-color: rgba(17, 25, 40, 0.75);
+//     border-radius: 12px;
+//     border: 1px solid rgba(255, 255, 255, 0.125);
+// }
